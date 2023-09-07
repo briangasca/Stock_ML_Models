@@ -7,3 +7,5 @@ Models:
 Keras
 
 ARIMA Linear Regression
+
+XGBoost
