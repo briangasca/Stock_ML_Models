@@ -1,0 +1,387 @@
+body {
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(3,0,74,1) 0%, rgba(0,0,0,1) 57%, rgba(16,2,64,1) 95%);
+  color: white;
+  width: 100%;
+  height: 100vw;
+  z-index: 2;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 10px;
+}
+
+/*-------------- Dropdown ---------------*/
+.container_drp{
+  padding-left: 40%;
+}
+:root {
+  --background-gradient: linear-gradient(178deg, #ffff33 10%, #3333ff);
+  --gray: #34495e;
+  --darkgray: #2c3e50;
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+
+/* ----------Graph Display--------- */
+
+@keyframes fadeInDown {
+  0% {
+     opacity: 0;
+     transform: translateY(-50px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+} 
+
+@keyframes fadeIn_reload {
+  0% {
+     opacity: 0;
+     transform: translateX(-50%);
+     filter: blur(2.5px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+     filter: blur(0);
+  }
+} 
+
+.fadeIn_reload {
+  animation: fadeIn_reload ease-in-out 1s !important;
+  display: block;
+}
+
+.container{
+  font-family: 'Quicksand', sans-serif;
+  animation:fadeInDown ease-in 2.5s; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  
+}
+
+
+.noMargin {
+    margin: 0px;
+  }
+
+.noMargin_2{
+  transition-delay: 200ms;
+}
+
+  
+  .one {
+    background-color: #343554;
+    margin:15px;
+    width: 750px;
+    height: 550px;
+    text-align: center;
+    border-radius: 10px;
+
+  }
+
+  .LR{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    margin: 45px;
+  }
+  
+  .two {
+    background-color: #343554;
+    margin:15px;
+    width: 750px;
+    height: 550px;
+    text-align: center;
+    border-radius: 10px;
+
+  }
+
+  .keras{
+    width: 525px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    margin: 25px;
+  }
+  
+  .three {
+    background-color: #343554;
+    margin:15px;
+    width: 750px;
+    height: 550px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .xgb{
+    width: 525px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    margin: 25px;
+  }
+  
+  .four {
+    background-color: #343554;
+    margin:15px;
+    width: 750px;
+    height: 550px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .prophet{
+    width: 525px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    margin: 25px;
+  }
+
+
+  /* ------------Animated Background------------ */
+
+.main-area{
+  width: 100%;
+  height: 2000px;
+  z-index: -1;
+}
+
+.circles { 
+  position: absolute;
+  /* margin-top: 200px; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  overflow: hidden;
+  z-index: -1;
+}
+  
+@keyframes animate{
+  0%{
+    opacity: 1;
+    border-radius: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+  100%{
+    opacity: 0;
+    border-radius: 50%;
+    transform: translateY(-3000px) rotate(720deg);
+  }
+}
+
+.circles div {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.2);
+  bottom: -150px;
+  animation: animate 25s linear infinite;
+}
+
+.circles div:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles div:nth-child(2){
+  left: 5%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 31s
+}
+
+.circles div:nth-child(3){
+  left: 90%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles div:nth-child(4){
+  left: 80%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 26s;
+}
+
+.circles div:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles div:nth-child(6){
+  left: 95%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles div:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 4s;
+}
+
+.circles div:nth-child(8){
+  left: 15%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 35s;
+}
+
+.circles div:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 38s;
+}
+
+.circles div:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 26s;
+}
+
+.circles div:nth-child(11){
+  left: 65%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 10s;
+  animation-duration: 32s;
+}
+
+.circles div:nth-child(12){
+  left: 10%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 13s;
+  animation-duration: 26s;
+}
+
+.circles div:nth-child(13){
+  left: 90%;
+  width: 75px;
+  height: 75px;
+  animation-delay: 17s;
+  animation-duration: 22s;
+}
+
+.circles div:nth-child(14){
+  left: 45%;
+  width: 45px;
+  height: 45px;
+  animation-delay: 12s;
+  animation-duration: 33s;
+}
+
+.circles div:nth-child(15){
+  left: 15%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 14s;
+  animation-duration: 26s;
+}
+
+/* ----------About Us---------- */
+
+h3{
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brian{
+  background-color: #010020;
+  outline-color: white;
+  outline: 5px;
+  margin:15px;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-radius: 10px;
+  z-index: -2;
+}
+
+.shawn{
+  background-color: #010020;
+  outline-color: white;
+  outline: 5px;
+  margin:15px;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-radius: 10px;
+  z-index: -2;
+}
+
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
