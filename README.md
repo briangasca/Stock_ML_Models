@@ -1,11 +1,19 @@
-# Models
+# SPIS 2023 Final Project: Stock Prediction with Machine Learning
 
-Stock prediction using different types of models.
+Developed by: [Brian Gasca](https://github.com/briangasca) and [Shawn Cheng](https://github.com/SC450)
 
-Models:
+> ML Models:
+> 
+> - Tensorflow Keras
+>
+> - ARIMA Regression
+>
+> - XGBoost
+>
+> - Prophet
+>
 
-Keras
+DevContainer and other configuration for developing Flask projects
+with GitHub Codespaces.
 
-ARIMA Linear Regression
 
-XGBoost
